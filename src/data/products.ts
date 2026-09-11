@@ -108,7 +108,7 @@ export const products: Product[] = [
     name: 'نظارة كلوب ماستر',
     price: 359,
     originalPrice: 500,
-    image: 'https://images.unsplash.com/photo-1556306535-0f09a537f0a3?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1508632118034-646554b69862?w=400&h=400&fit=crop',
     category: 'men',
     rating: 4.6,
     reviews: 145,

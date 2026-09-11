@@ -18,12 +18,14 @@ export default function ProductDetail({ product, onBack, onAddToCart, onToggleFa
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-gray-600 hover:text-amber-600 mb-6 transition-colors"
+        className="flex items-center gap-2 text-gray-600 hover:text-amber-600 mb-6 transition-colors group"
       >
-        <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        <span className="font-medium">العودة</span>
+        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-200 group-hover:border-amber-300 group-hover:shadow-md transition-all">
+          <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </div>
+        <span className="font-medium group-hover:text-amber-600 transition-colors">العودة للرئيسية</span>
       </button>
 
       <div className="grid md:grid-cols-2 gap-8">

@@ -103,18 +103,34 @@ function App() {
       )}
 
       {currentPage === 'category' && (
-        <ProductGrid
-          products={filteredProducts}
-          title={
-            selectedCategory === 'men' ? 'نظارات رجالية' :
-            selectedCategory === 'women' ? 'نظارات نسائية' :
-            selectedCategory === 'boys' ? 'نظارات أولاد' :
-            'نظارات بنات'
-          }
-          onProductClick={openProductDetail}
-          onToggleFavorite={toggleFavorite}
-          isFavorite={isFavorite}
-        />
+        <div>
+          {/* Back Button */}
+          <div className="max-w-7xl mx-auto px-4 pt-4">
+            <button
+              onClick={() => setCurrentPage('home')}
+              className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition-colors group"
+            >
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm border border-gray-100 group-hover:border-amber-200 group-hover:shadow-md transition-all">
+                <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </div>
+              <span className="font-medium group-hover:text-amber-600 transition-colors">العودة للرئيسية</span>
+            </button>
+          </div>
+          <ProductGrid
+            products={filteredProducts}
+            title={
+              selectedCategory === 'men' ? 'نظارات رجالية' :
+              selectedCategory === 'women' ? 'نظارات نسائية' :
+              selectedCategory === 'boys' ? 'نظارات أولاد' :
+              'نظارات بنات'
+            }
+            onProductClick={openProductDetail}
+            onToggleFavorite={toggleFavorite}
+            isFavorite={isFavorite}
+          />
+        </div>
       )}
 
       {currentPage === 'detail' && selectedProduct && (
