@@ -21,7 +21,7 @@ export default function Header({ cartCount, onCartClick, onLogoClick }: HeaderPr
           </div>
           <div>
             <h1 className="text-xl font-bold bg-gradient-to-l from-amber-500 to-orange-600 bg-clip-text text-transparent">
-              ShadeVibe
+              Sunora
             </h1>
             <p className="text-[10px] text-gray-400 -mt-1 tracking-wider">SUNGLASSES STORE</p>
           </div>
