@@ -1,4 +1,8 @@
-export default function Hero() {
+interface HeroProps {
+  onShopNow?: () => void;
+}
+
+export default function Hero({ onShopNow }: HeroProps) {
   return (
     <section className="relative overflow-hidden">
       {/* Background */}
@@ -25,7 +29,10 @@ export default function Hero() {
               مجموعة حصرية من أفخم النظارات الشمسية العالمية بأفضل الأسعار
             </p>
             <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <button className="px-8 py-3.5 bg-gradient-to-l from-amber-500 to-orange-500 text-white font-semibold rounded-full shadow-lg shadow-amber-200/50 hover:shadow-amber-300/60 hover:scale-105 transition-all">
+              <button 
+                onClick={onShopNow}
+                className="px-8 py-3.5 bg-gradient-to-l from-amber-500 to-orange-500 text-white font-semibold rounded-full shadow-lg shadow-amber-200/50 hover:shadow-amber-300/60 hover:scale-105 transition-all"
+              >
                 تسوق الآن
               </button>
               <button className="px-8 py-3.5 bg-white text-gray-700 font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all border border-gray-100">
